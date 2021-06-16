@@ -1,72 +1,51 @@
 // import all models
-//const Post = require('./Post');
+const Post = require("./Post");
 const User = require("./User");
-//const Vote = require('./Vote');
-//const Comment = require('./Comment');
+const Comment = require("./Comment");
 
 // create associations
-/*
+
+// USER and POSTS
+//
+// a USER can have many POSTS
+// a POST belongs to only one USER
+
 User.hasMany(Post, {
-  foreignKey: 'user_id'
+  foreignKey: "user_id",
 });
 
 Post.belongsTo(User, {
-  foreignKey: 'user_id',
-  onDelete: 'SET NULL'
+  foreignKey: "user_id",
+  onDelete: "SET NULL",
 });
 
-User.belongsToMany(Post, {
-  through: Vote,
-  as: 'voted_posts',
+// USER and COMMENTS
+//
+// a USER can have many COMMENTS
+// a COMMENT belongs to only one USER
 
-  foreignKey: 'user_id',
-  onDelete: 'SET NULL'
-});
-
-Post.belongsToMany(User, {
-  through: Vote,
-  as: 'voted_posts',
-  foreignKey: 'post_id',
-  onDelete: 'SET NULL'
-});
-
-Vote.belongsTo(User, {
-  foreignKey: 'user_id',
-  onDelete: 'SET NULL'
-});
-
-Vote.belongsTo(Post, {
-  foreignKey: 'post_id',
-  onDelete: 'SET NULL'
-});
-
-User.hasMany(Vote, {
-  foreignKey: 'user_id'
-});
-
-Post.hasMany(Vote, {
-  foreignKey: 'post_id'
+User.hasMany(Comment, {
+  foreignKey: "user_id",
+  onDelete: "SET NULL",
 });
 
 Comment.belongsTo(User, {
-  foreignKey: 'user_id',
-  onDelete: 'SET NULL'
+  foreignKey: "user_id",
+  onDelete: "SET NULL",
+});
+
+// POST and COMMENT
+//
+// a POST can have many COMMENTS
+// a COMMENT belongs to one POST
+
+Post.hasMany(Comment, {
+  foreignKey: "post_id",
 });
 
 Comment.belongsTo(Post, {
-  foreignKey: 'post_id',
-  onDelete: 'SET NULL'
+  foreignKey: "post_id",
+  onDelete: "SET NULL",
 });
 
-User.hasMany(Comment, {
-  foreignKey: 'user_id',
-  onDelete: 'SET NULL'
-});
-
-Post.hasMany(Comment, {
-  foreignKey: 'post_id'
-});
-*/
-
-//module.exports = { User, Post, Vote, Comment };
-module.exports = { User };
+module.exports = { User, Post, Comment };
