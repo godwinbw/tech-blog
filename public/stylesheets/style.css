@@ -21,6 +21,8 @@ body,
 html {
   height: 100%;
   font-family: sans-serif;
+
+  background-color: var(--bg-light);
   color: var(--text-dark);
 }
 
@@ -187,6 +189,10 @@ main {
 .content-row {
   padding: 10px;
 }
+
+/* LOGIN FORM  START */
+
+/* SIGNUP FORM START */
 
 /* NEXT SECTION START */
 
