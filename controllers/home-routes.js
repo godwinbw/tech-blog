@@ -116,6 +116,7 @@ router.get("/post/:id", (req, res) => {
 });
 */
 
+// route for user login
 router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
     res.redirect("/");
@@ -123,6 +124,22 @@ router.get("/login", (req, res) => {
   }
 
   res.render("login");
+});
+
+// route for user signup
+
+router.get("/signup", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+
+  res.render("signup");
+});
+
+router.get("/home", (req, res) => {
+  res.redirect("/");
+  return;
 });
 
 module.exports = router;
