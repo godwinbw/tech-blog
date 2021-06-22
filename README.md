@@ -115,8 +115,6 @@ This app follows a MVC architectural structure, with following technologies:
 
 <img src="./screenshot-1.png" style="width: 50%; height=auto;">
 
-### Challenge 14 - link to application
+### Challenge 14 - link to application deployed on Heroku
 
-<!---
-<https://streamable.com/jklj1y>
--->
+<https://polar-sea-27289.herokuapp.com/>
