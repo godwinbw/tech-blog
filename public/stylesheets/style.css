@@ -233,6 +233,44 @@ main {
   background-color: var(--button-highlight);
 }
 
+/* DASHBOARD SECTION START */
+
+#dashboard-row {
+  display: flex;
+  flex-direction: row;
+}
+
+#dashboard-column {
+  display: flex;
+  flex-direction: column;
+}
+
+#create-new-post-row {
+  display: flex;
+  flex-direction: row;
+}
+
+#create-new-post-column {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+#post-detail-row {
+  display: flex;
+  flex-direction: column;
+}
+
+#post-detail-column {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+#
+
 /* NEXT SECTION START */
 
 button {
