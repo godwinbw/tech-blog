@@ -1,20 +1,25 @@
-{{> post-info post}}
+<div class="pure-g" id='single-post-row'>
+  <div class="pure-u-1" id='single-post-column'>
 
-{{#if loggedIn}}
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
+    {{> post-info post}}
+
+    {{#if loggedIn}}
+    <form class="comment-form" id="single-post-comment-form">
+      <div>
+        <textarea id="single-post-comment-body" name="comment-body"></textarea>
+      </div>
+
+      <div>
+        <button class="login-button" type="submit">Add Comment</button>
+      </div>
+    </form>
+    {{/if}}
+
+    {{> comments post.comments}}
+
+    {{#if loggedIn}}
+    <script src="/javascript/comment.js"></script>
+    {{/if}}
+
   </div>
-
-  <div>
-    <button type="submit">add comment</button>
-    <button type="button" class="upvote-btn">upvote</button>
-  </div>
-</form>
-{{/if}}
-
-{{> comments post.comments}}
-
-{{#if loggedIn}}
-<script src="/javascript/comment.js"></script>
-{{/if}}
+</div>
