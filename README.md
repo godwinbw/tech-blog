@@ -109,9 +109,11 @@ This app follows a MVC architectural structure, with following technologies:
 
 ### **Challenge 14 - screenshots**
 
-<!---
-<img src="./screenshot.png" style="width: 50%; height=auto;">
--->
+<img src="./screenshot-1.png" style="width: 50%; height=auto;">
+
+<img src="./screenshot-1.png" style="width: 50%; height=auto;">
+
+<img src="./screenshot-1.png" style="width: 50%; height=auto;">
 
 ### Challenge 14 - link to application
 
