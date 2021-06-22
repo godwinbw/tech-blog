@@ -10,6 +10,8 @@
   --button-highlight: #655858;
   --button: #a79f9f;
   --button-text: #231111;
+  --button-delete: #d41414;
+  --button-delete-highlight: #ff643d;
 }
 
 /* remove default margins from every elememt */
@@ -282,7 +284,73 @@ main {
   width: 90%;
 }
 
-#
+/* EDIT POST SECTION START */
+
+#edit-post-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#edit-post-column {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+  width: 90%;
+}
+
+.edit-post-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#post-title {
+  width: 50%;
+}
+
+.edit-comment-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#post-content {
+  width: 80%;
+}
+
+#comment-body {
+  width: 80%;
+}
+
+.delete-post-btn {
+  cursor: pointer;
+  text-decoration: none;
+  background-color: var(--button-delete);
+  color: var(--button-text);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 100%;
+  font-weight: bold;
+  transition: color 0.1s;
+}
+
+.delete-post-btn:hover {
+  background-color: var(--button-delete-highlight);
+}
+
+/* COMMENT SECTION START */
+
+.comment {
+  padding: 1%;
+  margin-bottom: 1%;
+  background-color: #7c7c74cc;
+}
+
+.comment:nth-child(odd) {
+  background-color: #fff5eb;
+}
 
 /* NEXT SECTION START */
 
@@ -401,15 +469,6 @@ header h1 {
 
 .comment-form {
   margin-bottom: 5%;
-}
-
-.comment {
-  padding: 1%;
-  margin-bottom: 1%;
-}
-
-.comment:nth-child(odd) {
-  background-color: #fff5eb;
 }
 
 .comment .meta {
